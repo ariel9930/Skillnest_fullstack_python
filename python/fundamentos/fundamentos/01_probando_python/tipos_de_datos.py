@@ -64,3 +64,25 @@ print(perro[0]) #Imprime: Scooby Doo
 
 #Tarea
 # Crear una matriz de 4x4 y mostrar el número 16 en la terminal.
+
+
+#JSON ---> es un tipo de dato que se utiliza
+#para almacenar información en un formato de texto plano.
+#Es muy utilizado en la web  para intercambiar información
+#entre cliente y el servidor.
+
+persona={
+    'nombre': 'Carmen',
+    'edad': 31, 'altura': 1.71,
+    'usa_lentes': False
+}
+persona['nombre'] = 'Valeria' #Actualiza si el valor de la llave existe
+persona['hobbies'] = ['jugar videojuegos', 'programación']
+#Incorporar dos nuevas llaves a personas.
+#Profesión, comida favorita, mascotas, peliculas_favoritas
+persona['profesion'] = 'Actor'
+persona['comida_favorita'] = 'hamburguesa'
+persona['mascotas'] = ['bulldog', 'doberman']
+persona['peliculas_favoritas'] = ['city boy la asencion 2', 'tralalero tralali el asesino']
+#imprimir el diccionario completo
+print(persona)
