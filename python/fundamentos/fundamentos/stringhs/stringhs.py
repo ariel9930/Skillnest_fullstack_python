@@ -9,22 +9,7 @@
 # 🧾 Cadena literal
 # Las cadenas son secuencias de caracteres, pueden incluir letras, números, símbolos, y se colocan entre comillas simples o dobles. Por ejemplo:
 
-print("Esta es una cadenas de caracteres.")
-print('Esta es una cadenas de caracteres con comillas simples.')
 
-# ➕ Concatenar cadenas y variables con la función print
-# Existen distintas maneras en las que podemos imprimir una 
-# cadena que contenga información de variables. Una de ellas 
-# es añadiendo una coma después de la cadena seguido de una variable. 
-# Esto ocasiona que la función print() agregue un espacio 
-# entre los elementos separados por comas.
-nombre = input("Ingresar nombre: ") #Ingresado por teclado
-print("Me llamo", nombre) #concatena con una ,
-
-# Otra manera es concatenando el contenido con la ayuda de +.
-
-apellido = "Marcelo" #Ingresado por teclado
-print("Mi nombre es " + apellido) #no se añade espacio entre las cadenas
 
 # A diferencia de la primera forma, esta no agrega ningún
 #  espacio entre las cadenas, por lo que si queremos alguno 
@@ -34,8 +19,6 @@ print("Mi nombre es " + apellido) #no se añade espacio entre las cadenas
 #  concatenar una cadena con un entero usando +? ¡Nos da un error!
 
 #ejemplo
-numero = 5
-print("¿Cuántas vocales hay? " + str(numero)) #erro de tipo 
 
 # 🔄 Conversión de tipos (Type Casting) o Conversión de tipo explícito
 # Python no tiene manera de unir una cadena con un número, 
@@ -48,19 +31,15 @@ print("¿Cuántas vocales hay? " + str(numero)) #erro de tipo
 # Podemos hacer la conversión también de cadena a número, por ejemplo:
 
 
-tiempo_preparacion = 1
-tiempo_horneado = "2"
-tiempo_total = tiempo_preparacion + tiempo_horneado 
+
 
 # #ERROR: TypeError: unsupported operand type(s) for +: 'int' and 'str'
 
-tiempo_total = tiempo_preparacion + int(tiempo_horneado) #Imprime: 3
+
 
 #ejemplo 2
 #ingreso valor por teclado y lo transformo a entero
-numero1 = int(input("Ingrese el primer número: "))
-#ingreso valor por teclado y lo transformo a decimal
-numero2 = float(input("Ingrese el segundo número: "))
+
 
 # 🧩 Interpolación de cadenas
 # También tenemos la posibilidad de insertar variables en nuestras cadenas, una práctica conocida como interpolación de cadenas. Existen distintas maneras de llevar a cabo esta tarea.
@@ -68,14 +47,11 @@ numero2 = float(input("Ingrese el segundo número: "))
 # 🧬 Cadenas »f» (Interpolación de cadenas literal)
 # A partir de la versión 3.6 de Python, se pueden utilizar las cadenas “f” para interpolar cadenas. La sintaxis es la siguiente: escribimos una f justo después de la comilla inicial. Después, dentro de la cadena escribimos la variable dentro de llaves.
 
-name = "Marcelo"
-edad = 29
-print(f"Mi nombre es {name} y tengo {edad} años de edad.")
+
 
 #tarea: Crear variables con input.
 #Ingrese nombre, anio_nacimiento, anio_actual, caluclar edad
 #y mostrar en pantalla con f-string
-
 
 # 🛠️ string.format()
 # Antes de que se introdujeran las cadenas “f”, esta misma funcionalidad se lograba con el método .format(). Para usar este método, escribimos la cadena completa y colocamos llaves ({}) en los espacios en los que queremos desplegar el valor de la variable. Después invocamos al método format y pasamos las variables como argumentos en el orden que debieran llenarse los parámetros {}. Por ejemplo:
@@ -85,10 +61,21 @@ print(f"Mi nombre es {name} y tengo {edad} años de edad.")
 # print("Mi nombre es {} y tengo {} años de edad.".format(nombre, edad))
 
 # #Imprime: Mi nombre es Marcelo y tengo 29 años de edad.
-# print("Tengo {} años de edad y mi nombre es {}".format(edad, nombre))
+
 
 # #Imprime: Tengo 29 años de edad y mi nombre es Marcelo
 # Nota que el método format lee la cadena de caracteres de izquierda a derecha, y va reemplazando las {} con el valor de las variables dadas en orden. Es importante entender que dado a esto, el número de {} debe ser el mismo número de argumentos dados a la función.
+
+#ejercicio: Crear variables con input,
+#ingresar nombre_mascota, edad_mascota, especie_mascota,
+#mostrar en pantalla con .format().
+#frase libre.
+
+nombre_mascota = input("Ingrese el nombre de la mascota: ")
+edad_mascota =  int(input("Ingrese edad de la mascota: "))
+especie_mascota = input("Ingrese especie de mascota (perro, gato, tortuga, etc.): ")
+print("Les presento a {}, es un {} muy regaloneado y tiene {} años.".format(nombre_mascota, especie_mascota, edad_mascota))
+
 
 # 🧮 %-formatting
 # Quizás en algún código te puedas topar con un método que se utilizaba antes de que existiera las formas vistas antes de interpolación. En lugar de utilizar llaves, se utiliza el símbolo % para indicar un parámetro; %s para indicar una cadena y %d para indicar un número. Una vez establecida la cadena, se coloca de nuevo % para separar el texto de las variables que serán interpoladas. Por ejemplo:
